@@ -1,0 +1,12 @@
+version: "3.7"
+
+# All available services
+services:
+  metabase:
+    container_name: "data-engine_metabase"
+    restart: "always"
+    image: metabase/metabase
+    volumes:
+      - ./metabase-data:/metabase-data
+    ports:
+      - 3000:3000
